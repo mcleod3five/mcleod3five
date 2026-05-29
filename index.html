@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="mcleod3five is an architecture and digital innovation studio delivering residential, education and community projects across Sussex and the South East." />
+  <title>mcleod3five | Architecture & Digital Innovation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top">mcleod<span>3five</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Architecture • Digital Design • Creative Strategy</p>
+        <h1>Thoughtful architecture for homes, education and community spaces.</h1>
+        <p class="hero-text">mcleod3five helps clients shape clear, creative and buildable projects, from early ideas and planning submissions through to technical coordination and project delivery.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="button primary">Start a project</a>
+          <a href="#projects" class="button secondary">View work</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Architectural project highlight">
+        <div class="image-placeholder">
+          <span>Add your hero project image here</span>
+        </div>
+        <p>Residential extensions, community buildings, education spaces and digital design support.</p>
+      </div>
+    </section>
+
+    <section class="intro strip">
+      <p>Based in Sussex, working across the South East. Practical design thinking with a sharp eye for planning, cost, buildability and beautiful everyday use.</p>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Services</p>
+        <h2>Clear support at each stage of your project.</h2>
+      </div>
+      <div class="cards three">
+        <article class="card">
+          <h3>Residential Design</h3>
+          <p>Extensions, remodels, loft conversions and feasibility studies that make homes work harder without losing their character.</p>
+        </article>
+        <article class="card">
+          <h3>Planning & Building Regulations</h3>
+          <p>Planning drawings, re-submissions, technical packages, consultant coordination and Building Control submissions.</p>
+        </article>
+        <article class="card">
+          <h3>Education & Community</h3>
+          <p>Architecture, digital innovation and strategic design support for schools, colleges, funded projects and community facilities.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section muted">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects with purpose, polish and a plan.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-image placeholder">Project image</div>
+          <div>
+            <h3>Residential Extension</h3>
+            <p>Rear extension and internal reconfiguration to improve light, flow and usable family space.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-image placeholder">Project image</div>
+          <div>
+            <h3>Community Facility</h3>
+            <p>Design and coordination support for funded community and sport facilities.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-image placeholder">Project image</div>
+          <div>
+            <h3>Education Spaces</h3>
+            <p>Design thinking for flexible, future-facing learning environments and digital skills spaces.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-image placeholder">Project image</div>
+          <div>
+            <h3>Digital Innovation</h3>
+            <p>Creative technology, immersive learning and digital transformation support for education and design teams.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Led by Georgina McLeod, architect and digital innovator.</h2>
+      </div>
+      <div class="about-copy">
+        <p>mcleod3five brings together architectural design, project coordination and digital innovation. The studio works with homeowners, schools, colleges, local organisations and community clients to turn early ideas into clear, achievable design proposals.</p>
+        <p>With experience across residential, education, community and funded projects, the approach is calm, collaborative and practical: good ideas, well drawn, with fewer surprises along the way.</p>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="section-heading">
+        <p class="eyebrow">Process</p>
+        <h2>Simple, structured and human.</h2>
+      </div>
+      <ol class="steps">
+        <li><strong>Listen</strong><span>Understand the brief, budget, site and opportunities.</span></li>
+        <li><strong>Design</strong><span>Develop clear options and planning-ready drawings.</span></li>
+        <li><strong>Coordinate</strong><span>Work with consultants, Building Control and contractors.</span></li>
+        <li><strong>Deliver</strong><span>Support the project through tender, construction and completion.</span></li>
+      </ol>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Got a project brewing?</h2>
+        <p>Send a short note about your site, timescale and what you would like to achieve.</p>
+      </div>
+      <div class="contact-card">
+        <p><strong>Email</strong><br><a href="mailto:hello@mcleod3five.co.uk">hello@mcleod3five.co.uk</a></p>
+        <p><strong>Location</strong><br>Hove, East Sussex</p>
+        <p><strong>Instagram</strong><br><a href="https://www.instagram.com/" target="_blank" rel="noopener">Add your Instagram link</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> mcleod3five. Architecture & digital innovation.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
