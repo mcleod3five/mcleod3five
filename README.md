@@ -1,25 +1,16 @@
-# mcleod3five GitHub Pages Site
+# mcleod3five website files
 
-A simple one-page website ready to host for free on GitHub Pages.
+Upload these two files to the root of your GitHub Pages repository:
 
-## How to use
+- `index.html`
+- `style.css`
 
-1. Create a GitHub account or sign in.
-2. Create a new repository called `mcleod3five-website`.
-3. Upload all files from this folder.
-4. In GitHub, go to **Settings > Pages**.
-5. Under **Build and deployment**, choose:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-6. Click save.
+Then click **Commit changes** in GitHub.
 
-Your site will publish at a GitHub Pages URL first. You can then connect your own domain.
+## Notes
 
-## Things to edit
-
-- Replace `hello@mcleod3five.co.uk` with your actual email if different.
-- Add project images into the `assets` folder.
-- Replace the placeholder image blocks in `index.html` with real images.
-- Add your Instagram URL.
-- Update project titles and descriptions.
+- The hero image has been kept as the same external image reference from the previous version.
+- The site now positions mcleod3five around residential, commercial, community architecture and project management.
+- Education has been removed from the public-facing copy.
+- Replace `Add your Instagram link` in `index.html` with your real Instagram URL when ready.
+- The email is currently set as `hello@mcleod3five.co.uk`.
