@@ -13,3 +13,7 @@
 @media(max-width:800px){.project-image{aspect-ratio:3/2}}
 @media(max-width:560px){.project-image{aspect-ratio:3/2}#image-viewer{padding:3.5rem .5rem .5rem}}
 @media(prefers-reduced-motion:reduce){.project-image,.project-image img{transition:none}}
+
+/* Drawn arrows avoid iOS rendering the arrow character as an emoji. */
+.arrow-icon{display:inline-block;flex:none;vertical-align:-.12em;width:1em;height:1em;stroke:currentColor}
+.view-hint .arrow-icon{width:.9em;height:.9em;margin-left:.25em}
