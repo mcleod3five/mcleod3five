@@ -8,7 +8,7 @@ Upload the **contents** of this folder (`index.html`, `style.css`, `favicon.svg`
 
 ## Project photographs
 
-All eleven photographs are already included in `images/`. Keep the filenames exactly as supplied:
+All twelve photographs are already included in `images/`. Keep the filenames exactly as supplied:
 
 - `residential-remodel-east-sussex.jpg`
 - `rugby-club-east-sussex.jpg`
@@ -20,9 +20,10 @@ All eleven photographs are already included in `images/`. Keep the filenames exa
 - `Extension and renovation West Sussex.png`
 - `Extension Hampshire.png`
 - `Guitar Shop Sussex.png`
+- `Kitchen Extension Lindfield.png`
 - `Oak frame extension to game keepers cottage Sussex.png`
 
-The eight new filenames (without `.png`) are the visible project titles. Their individual descriptions can be added to the project captions in `index.html` once the wording is ready. Images are fitted inside the project cards without cropping; hover enlarges the card slightly, and clicking opens the full image. On phones, tap to view the full image.
+The nine new filenames (without `.png`) are the visible project titles. Their individual descriptions can be added to the project captions in `index.html` once the wording is ready. Images are fitted inside the project cards without cropping; hover enlarges the card slightly, and clicking opens the full image. On phones, tap to view the full image.
 
 ## Content edits
 
