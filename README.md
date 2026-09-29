@@ -4,17 +4,25 @@ One-page, static GitHub Pages website. No build step or dependencies.
 
 ## Replace the old site
 
-Upload `index.html`, `style.css`, `favicon.svg`, `CNAME` and the `images` folder to the **root of the existing GitHub Pages repository**, replacing the old `index.html`, `style.css` and `CNAME`. Keep the existing GitHub Pages settings and DNS configuration. The `CNAME` file is for `www.mcleod35.co.uk`.
+Upload the **contents** of this folder (`index.html`, `style.css`, `favicon.svg`, `CNAME`, and `images/`) to the root of your existing GitHub Pages repository. Replace `index.html` and upload the new pictures inside `images/`. Keep the existing GitHub Pages settings and DNS configuration. The `CNAME` file is for `www.mcleod35.co.uk`.
 
 ## Project photographs
 
-Put these exact filenames (lowercase `.jpg`) in the `images` folder:
+All eleven photographs are already included in `images/`. Keep the filenames exactly as supplied:
 
 - `residential-remodel-east-sussex.jpg`
 - `rugby-club-east-sussex.jpg`
 - `boathouse-west-sussex.jpg`
+- `Barn conversion East Sussex.png`
+- `Boat Deck East Sussex.png`
+- `Brighton extension and renovation.png`
+- `Extension and garage West Sussex.png`
+- `Extension and renovation West Sussex.png`
+- `Extension Hampshire.png`
+- `Guitar Shop Sussex.png`
+- `Oak frame extension to game keepers cottage Sussex.png`
 
-The project panels show a neutral placeholder until each image is uploaded. Use landscape or portrait photographs with the key subject near the centre; the layout crops them automatically. For best page speed, export images at roughly 1400 px wide and ideally under 500 KB each.
+The eight new filenames (without `.png`) are the visible project titles. Their individual descriptions can be added to the project captions in `index.html` once the wording is ready. Images are fitted inside the project cards without cropping; hover enlarges the card slightly, and clicking opens the full image. On phones, tap to view the full image.
 
 ## Content edits
 
