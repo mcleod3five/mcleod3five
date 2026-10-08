@@ -29,7 +29,9 @@
     .consent input{width:auto;margin:4px 0 0;flex:none}
     button{border:0;background:var(--ink);color:white;padding:15px 22px;font:inherit;cursor:pointer;width:100%}
     button:hover{background:#44443f}
-    .small{font-size:12px;color:var(--muted);margin:14px 0 0}
+    .small{font-size:12px;color:var(--muted);margin:10px 0 18px}
+    .upload-help{font-size:12px;color:var(--muted);margin:-10px 0 18px}
+    .status{font-size:14px;color:#8b2d20;margin:0 0 14px}
     footer{border-top:1px solid var(--line);padding:23px 6vw;color:var(--muted);font-size:13px;background:var(--white)}
     .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
     @media(max-width:720px){main{padding-top:48px}.layout{grid-template-columns:1fr;gap:32px}form{padding:22px}.intro{font-size:19px}}
@@ -46,9 +48,13 @@
         <h2>Start with an idea.</h2>
         <p>Use this free, no-obligation session to explain what you have in mind, ask early questions and explore possible next steps with Georgina, a chartered architect at McLeod35 Architecture.</p>
         <p>It’s a relaxed first conversation, not a formal design or planning assessment. If it sounds like a project I can help with, I’ll explain how we could take it forward.</p>
-        <p class="note">Complete the short form and your email app will open a ready-to-send enquiry. Once you send it, I’ll get back to you to arrange a convenient time for a video or phone call.</p>
+        <p class="note">Complete the short form and it will come straight to Georgina. She’ll get back to you to arrange a convenient time for a video or phone call.</p>
       </section>
-      <form id="booking-form">
+      <form id="booking-form" action="https://formsubmit.app/f/zhx96sdtwt" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="New What could you do? consultation request">
+        <input type="hidden" name="_replyto" id="replyto-field">
+        <input type="hidden" name="_format" value="plain">
+        <div class="hp" aria-hidden="true"><label for="website-check">Leave this field empty</label><input id="website-check" name="_gotcha" tabindex="-1" autocomplete="off"></div>
         <label for="name">Your name *</label>
         <input id="name" name="name" autocomplete="name" required>
         <label for="email">Email address *</label>
@@ -66,27 +72,35 @@
         </select>
         <label for="message">A few details about the property or idea *</label>
         <textarea id="message" name="message" maxlength="1500" required></textarea>
-        <label class="consent"><input id="consent" type="checkbox" required><span>I agree that McLeod35 Architecture may use these details to respond to this enquiry and arrange my consultation.</span></label>
-        <button type="submit">Continue to email</button>
-        <p class="small">Your email app will open with your enquiry ready to send. Please press Send to complete your request. If it does not open, email <a href="mailto:hello@mcleod35.co.uk">hello@mcleod35.co.uk</a>.</p>
+        <label for="plans-link">Link to plans or property listing (optional)</label>
+        <input id="plans-link" name="plans_link" type="url" placeholder="https://…" inputmode="url">
+        <label for="plans-file">Upload plans or a property document (optional)</label>
+        <input id="plans-file" name="plans_document" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+        <p class="upload-help">PDF, image or Word document. Please keep the file under 4 MB. For larger plans, add a sharing link above.</p>
+        <label class="consent"><input id="consent" name="consent" type="checkbox" value="Agreed" required><span>I agree that McLeod35 Architecture may use these details to respond to this enquiry and arrange my consultation.</span></label>
+        <p id="form-status" class="status" role="alert" hidden></p>
+        <button type="submit">Send enquiry</button>
+        <p class="small">Your details and any uploaded document will be sent securely for this enquiry. If the form does not work, email <a href="mailto:hello@mcleod35.co.uk">hello@mcleod35.co.uk</a>.</p>
       </form>
     </div>
   </main>
   <footer>McLeod35 Architecture · Architecture for homes and businesses</footer>
   <script>
-    document.getElementById('booking-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const phone = document.getElementById('phone').value.trim() || 'Not provided';
-      const interest = document.getElementById('interest').value;
-      const details = document.getElementById('message').value.trim();
-      const subject = encodeURIComponent('Free What could you do? consultation request');
-      const body = encodeURIComponent(
-        'Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nProject: ' + interest + '\nDetails: ' + details + '\n\nConsent: The sender agreed that McLeod35 Architecture may use these details to respond to the enquiry and arrange the consultation.'
-      );
-      window.location.href = 'mailto:hello@mcleod35.co.uk?subject=' + subject + '&body=' + body;
-    });
+    (function () {
+      var form = document.getElementById('booking-form');
+      var email = document.getElementById('email');
+      var replyTo = document.getElementById('replyto-field');
+      var file = document.getElementById('plans-file');
+      var status = document.getElementById('form-status');
+      form.addEventListener('submit', function (event) {
+        replyTo.value = email.value.trim();
+        if (file.files.length && file.files[0].size > 4 * 1024 * 1024) {
+          event.preventDefault();
+          status.textContent = 'That file is over 4 MB. Please add a sharing link to your plans instead.';
+          status.hidden = false;
+        }
+      });
+    }());
   </script>
 </body>
 </html>
