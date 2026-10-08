@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Book a free 20-minute What could you do? consultation with McLeod35 Architecture.">
+  <title>What could you do? | McLeod35 Architecture</title>
+  <style>
+    :root{--ink:#252522;--muted:#73736d;--line:#deded8;--paper:#f7f7f3;--accent:#a9a58e;--white:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Inter,Arial,sans-serif}
+    .top{padding:25px 6vw;border-bottom:1px solid var(--line);background:var(--white)}
+    .brand{font-size:14px;letter-spacing:.17em;text-transform:uppercase;font-weight:600;text-decoration:none;color:inherit}
+    main{max-width:1060px;margin:0 auto;padding:72px 24px 80px}
+    .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+    h1{font-family:Georgia,serif;font-weight:400;letter-spacing:-.035em;font-size:clamp(42px,7vw,76px);line-height:1.02;max-width:720px;margin:0 0 24px}
+    .intro{font-family:Georgia,serif;font-size:21px;line-height:1.5;max-width:670px;color:#4a4a45;margin:0 0 46px}
+    .layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+    h2{font:400 28px/1.2 Georgia,serif;margin:0 0 16px}
+    .details p{color:#55554f;margin:0 0 18px}
+    .note{border-top:1px solid var(--line);padding-top:18px;margin-top:26px;color:var(--muted);font-size:14px}
+    form{background:var(--white);padding:30px;border:1px solid var(--line)}
+    label{display:block;font-size:13px;font-weight:600;margin:0 0 7px}
+    input,select,textarea{width:100%;border:1px solid #c9c9c2;background:#fff;border-radius:0;padding:13px 14px;font:inherit;color:var(--ink);margin-bottom:18px}
+    input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+    textarea{min-height:110px;resize:vertical}
+    .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#55554f;margin:1px 0 20px}
+    .consent input{width:auto;margin:4px 0 0;flex:none}
+    button{border:0;background:var(--ink);color:white;padding:15px 22px;font:inherit;cursor:pointer;width:100%}
+    button:hover{background:#44443f}
+    .small{font-size:12px;color:var(--muted);margin:14px 0 0}
+    footer{border-top:1px solid var(--line);padding:23px 6vw;color:var(--muted);font-size:13px;background:var(--white)}
+    .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+    @media(max-width:720px){main{padding-top:48px}.layout{grid-template-columns:1fr;gap:32px}form{padding:22px}.intro{font-size:19px}}
+  </style>
+</head>
+<body>
+  <header class="top"><a class="brand" href="https://www.mcleod35.co.uk/">McLeod35 Architecture</a></header>
+  <main>
+    <p class="eyebrow">A complimentary 20-minute conversation</p>
+    <h1>What could you do?</h1>
+    <p class="intro">Thinking about changing a home or making more of a property? Tell me a little about it and we can talk through what might be possible.</p>
+    <div class="layout">
+      <section class="details">
+        <h2>Start with an idea.</h2>
+        <p>Use this free, no-obligation session to explain what you have in mind, ask early questions and explore possible next steps with Georgina, a chartered architect at McLeod35 Architecture.</p>
+        <p>It’s a relaxed first conversation, not a formal design or planning assessment. If it sounds like a project I can help with, I’ll explain how we could take it forward.</p>
+        <p class="note">Complete the short form and your email app will open a ready-to-send enquiry. Once you send it, I’ll get back to you to arrange a convenient time for a video or phone call.</p>
+      </section>
+      <form id="booking-form">
+        <label for="name">Your name *</label>
+        <input id="name" name="name" autocomplete="name" required>
+        <label for="email">Email address *</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="phone">Phone number (optional)</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+        <label for="interest">What are you thinking about? *</label>
+        <select id="interest" name="interest" required>
+          <option value="" selected disabled>Please choose</option>
+          <option>Extension or loft conversion</option>
+          <option>Renovation or reconfiguration</option>
+          <option>Buying a property and exploring its potential</option>
+          <option>Developing a plot or property</option>
+          <option>Something else</option>
+        </select>
+        <label for="message">A few details about the property or idea *</label>
+        <textarea id="message" name="message" maxlength="1500" required></textarea>
+        <label class="consent"><input id="consent" type="checkbox" required><span>I agree that McLeod35 Architecture may use these details to respond to this enquiry and arrange my consultation.</span></label>
+        <button type="submit">Continue to email</button>
+        <p class="small">Your email app will open with your enquiry ready to send. Please press Send to complete your request. If it does not open, email <a href="mailto:hello@mcleod35.co.uk">hello@mcleod35.co.uk</a>.</p>
+      </form>
+    </div>
+  </main>
+  <footer>McLeod35 Architecture · Architecture for homes and businesses</footer>
+  <script>
+    document.getElementById('booking-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim() || 'Not provided';
+      const interest = document.getElementById('interest').value;
+      const details = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Free What could you do? consultation request');
+      const body = encodeURIComponent(
+        'Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nProject: ' + interest + '\nDetails: ' + details + '\n\nConsent: The sender agreed that McLeod35 Architecture may use these details to respond to the enquiry and arrange the consultation.'
+      );
+      window.location.href = 'mailto:hello@mcleod35.co.uk?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
